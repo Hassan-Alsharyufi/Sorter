@@ -14,11 +14,27 @@ public class Sorter{
             array[i+1] = key;  
         }  
     }
-    public static void sort(int[] array) {
+    public static void selectionSort(int[] arr){  
+        for (int i = 0; i < arr.length - 1; i++)  
+        {  
+            int index = i;  
+            for (int j = i + 1; j < arr.length; j++){  
+                if (arr[j] < arr[index]){  
+                    index = j;//searching for lowest index  
+                }  
+            }  
+            int smallerNumber = arr[index];   
+            arr[index] = arr[i];  
+            arr[i] = smallerNumber;  
+        }  
+    }  
+    public static void sort1(int[] array) {
         selectionSort(array);
         
     }  
-    public static void sort(int array[])
-    insertionSort(array)
+    public static void sort2(int[] array){
+    insertionSort(array);
     
-    }  
+    
+    }
+}  
